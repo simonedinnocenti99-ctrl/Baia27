@@ -314,6 +314,9 @@ a:hover {
 
 section {
     padding: var(--spacing-xxl) 0;
+}
+
+.section-header h2[id] {
     scroll-margin-top: 50px;
 }
 
