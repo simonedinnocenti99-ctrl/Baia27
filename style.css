@@ -45,7 +45,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 110px;
+    scroll-padding-top: 50px;
 }
 
 body {
@@ -314,7 +314,7 @@ a:hover {
 
 section {
     padding: var(--spacing-xxl) 0;
-    scroll-margin-top: 110px;
+    scroll-margin-top: 50px;
 }
 
 .section-header {
