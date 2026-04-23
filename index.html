@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BAIA27 - Ristorante contemporaneo con vista mare">
+    <title>BAIA27 - Ristorante Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============================================================
+         NAVBAR - Minimal e elegante
+         ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">BAIA27</div>
+                
+                <!-- Hamburger menu per mobile -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Menu di navigazione -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">Il Locale</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#contact" class="nav-link">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO SECTION - Slider fotografico d'impatto
+         ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Aggiungi o rimuovi immagini qui, usa tutte le foto disponibili in assets/images -->
+            <div class="slider-slide active">
+                <img src="assets/images/bar interno.jpeg" alt="Bar interno di BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/esterno principale 1.jpeg" alt="Esterno principale BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/esterno principale 2.jpeg" alt="Esterno principale laterale BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/esterno secondario 1.jpeg" alt="Vista esterna BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/esterno secondario 2.jpeg" alt="Angolo esterno BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/sala interno 1.jpeg" alt="Sala interna BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/sala interno 2.jpeg" alt="Sala interna elegante BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/sala vista esterno 1.jpeg" alt="Sala con vista esterno BAIA27">
+            </div>
+            <div class="slider-slide">
+                <img src="assets/images/sala vista esterno 2.jpeg" alt="Sala vista esterno laterale BAIA27">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">BAIA27</h1>
+            <p class="hero-subtitle">Eleganza, Semplicità, Sapore</p>
+            <a href="#contact" class="cta-button primary">Prenota un Tavolo</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE ABOUT - Racconto del locale
+         ============================================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Il Nostro Spazio</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        BAIA27 nasce dall'idea di creare uno spazio dove la semplicità dialoga con l'eleganza, 
+                        dove ogni dettaglio racconta una storia di qualità e ricerca.
+                    </p>
+                    <p>
+                        In una cornice affacciata su [INSERIRE DESCRIZIONE DELLA LOCATION], 
+                        proponiamo un'esperienza culinaria che celebra i sapori autentici reinterpretati 
+                        con sensibilità contemporanea.
+                    </p>
+                    <p>
+                        La cucina di BAIA27 è un dialogo costante con il territorio, 
+                        con ingredienti scelti con cura e una dedizione al dettaglio in ogni piatto.
+                    </p>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-placeholder" style="background-image: url('[INSERIRE-URL-FOTO-INTERNO-RISTORANTE]')"></div>
+                </div>
+            </div>
+            
+            <!-- Valori -->
+            <div class="values">
+                <div class="value-card">
+                    <h3>Qualità</h3>
+                    <p>Ingredienti selezionati, fornitori di fiducia, dedizione al dettaglio.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Semplicità</h3>
+                    <p>Piatti sinceri, preparazioni autentiche, niente di superfluo.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Ospitalità</h3>
+                    <p>Uno spazio dove sentirsi accolti, un servizio attento e discreto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE MENU - In evidenza
+         ============================================================ -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Menu</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="menu-intro">
+                <p>Il nostro menu cambia con le stagioni, rispecchiando la disponibilità dei migliori ingredienti. 
+                   Di seguito una selezione dei nostri piatti più caratteristici.</p>
+            </div>
+            
+            <!-- Sezione Antipasti -->
+            <div class="menu-section">
+                <h3 class="menu-category">Antipasti</h3>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Crudo di [PESCE LOCALE]</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Selezionato giornalmente, marinato minimale con limone, olio e fiori di sale.
+                    </p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Burrata e Pomodori</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Crema di burrata fresca, pomodori di stagione, pesto leggero.
+                    </p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Focaccia di Recco</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Croccante e leggera, con formaggio locale e erbe aromatiche.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Sezione Piatti Principali -->
+            <div class="menu-section">
+                <h3 class="menu-category">Piatti Principali</h3>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Branzino al Forno</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Intero, al forno con limone, erbe selvatiche e olio extravergine.
+                    </p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Rigatoni con Ragù Leggero</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Fatto in casa, ragù di [INGREDIENTE LOCALE], pecorino grattugiato.
+                    </p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>[PIATTO SIGNATURE]</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        La nostra interpretazione contemporanea dei sapori della tradizione.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Sezione Dolci -->
+            <div class="menu-section">
+                <h3 class="menu-category">Dolci</h3>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Panna Cotta</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Cremosa e delicata, con coulis di frutti di bosco.
+                    </p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h4>Tiramisù della Casa</h4>
+                        <span class="item-price">€[PREZZO]</span>
+                    </div>
+                    <p class="item-description">
+                        Classico rivisitato, mascarpone, caffè, cacao.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CTA Menu -->
+            <div class="menu-cta">
+                <p>Per il menu completo e le bevande, <a href="#contact">contattaci</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE CONTATTI E INFORMAZIONI
+         ============================================================ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contatti e Prenotazioni</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Informazioni di contatto -->
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3>Dove Trovarci</h3>
+                        <p>
+                            [INDIRIZZO COMPLETO]<br>
+                            [CAP CITTÀ]
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Telefono</h3>
+                        <p>
+                            <a href="tel:[NUMERO-TELEFONO]">[NUMERO-TELEFONO]</a>
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Email</h3>
+                        <p>
+                            <a href="mailto:[EMAIL-CONTATTO]">[EMAIL-CONTATTO]</a>
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3>Orari</h3>
+                        <p>
+                            <strong>Lunedì - Mercoledì:</strong> [ORARIO]<br>
+                            <strong>Giovedì - Domenica:</strong> [ORARIO]<br>
+                            <strong>Chiuso:</strong> [GIORNO]
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Modulo prenotazione semplice -->
+                <div class="reservation-form">
+                    <h3>Prenota un Tavolo</h3>
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Numero ospiti</option>
+                                <option value="1">1 persona</option>
+                                <option value="2">2 persone</option>
+                                <option value="3">3 persone</option>
+                                <option value="4">4 persone</option>
+                                <option value="5">5 persone</option>
+                                <option value="6">6 persone</option>
+                                <option value="7">7+ persone</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Note speciali..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button primary">Prenota Ora</button>
+                    </form>
+                    <p class="form-note">* Riceverai una conferma via email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER - Essenziale
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BAIA27</h4>
+                    <p>Ristorante contemporaneo<br>dove la qualità incontra l'ospitalità.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Seguici</h4>
+                    <ul>
+                        <li><a href="[INSTAGRAM-LINK]" target="_blank">Instagram</a></li>
+                        <li><a href="[FACEBOOK-LINK]" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Orari</h4>
+                    <p>
+                        Lun-Mer: [ORARIO]<br>
+                        Gio-Dom: [ORARIO]<br>
+                        Chiuso [GIORNO]
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 BAIA27. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
