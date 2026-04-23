@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavbar();
     initMobileMenu();
     initHeroSlider();
-    initFormHandling();
     initScrollAnimation();
 });
 
@@ -83,109 +82,6 @@ function initMobileMenu() {
         }
     });
 }
-
-/* ================================================================
-   FORM PRENOTAZIONE
-   ================================================================ */
-
-function initFormHandling() {
-    const form = document.getElementById('reservationForm');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Raccogli i dati del form
-            const formData = new FormData(form);
-            
-            // Mostra messaggio di conferma
-            showNotification('Prenotazione inviata con successo! Ti contatteremo presto per confermare.');
-            
-            // Resetta il form
-            form.reset();
-            
-            // Nota: In un sito reale, qui manderesti i dati al server
-            // Ad esempio con fetch() o XHR
-            console.log('Dati prenotazione:', {
-                nome: form.querySelector('input[type="text"]').value,
-                email: form.querySelector('input[type="email"]').value,
-                telefono: form.querySelector('input[type="tel"]').value,
-                data: form.querySelector('input[type="date"]').value,
-                ora: form.querySelector('input[type="time"]').value,
-                ospiti: form.querySelector('select').value,
-                note: form.querySelector('textarea').value
-            });
-        });
-    }
-}
-
-/* ================================================================
-   NOTIFICHE
-   ================================================================ */
-
-function showNotification(message) {
-    // Crea una notifica di successo
-    const notification = document.createElement('div');
-    notification.className = 'notification success';
-    notification.textContent = message;
-    
-    // Aggiungi lo stile CSS alla notifica
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px 24px;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 2000;
-        animation: slideIn 0.3s ease;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 14px;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Rimuovi la notifica dopo 4 secondi
-    setTimeout(function() {
-        notification.style.animation = 'slideOut 0.3s ease';
-        setTimeout(function() {
-            notification.remove();
-        }, 300);
-    }, 4000);
-}
-
-/* ================================================================
-   ANIMAZIONI CSS
-   ================================================================ */
-
-// Aggiungi le keyframe animation dinamicamente
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
 
 /* ================================================================
    SCROLL ANIMATION - Fade in su scroll
